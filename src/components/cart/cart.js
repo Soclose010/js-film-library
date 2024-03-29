@@ -1,4 +1,6 @@
 import { CartItem } from "../cart-item/cart-item";
+import { FoundedText } from "../founded-text/founded-text";
+import { Loading } from "../loading/loading";
 import "./cart.css";
 
 export class Cart {
@@ -9,17 +11,11 @@ export class Cart {
 
   render() {
     const el = document.createElement("div");
-    const text = document.createElement("div");
     const cart = document.createElement("div");
-    text.classList.add("text");
-    text.innerHTML = `Founded Films - ${this.state.searchFilmsCountResult}`;
-    el.append(text);
     if (this.state.loading) {
-      const loading = document.createElement("div");
-      loading.classList.add("loading");
-      loading.innerHTML = `<div class="loading__text">Loading...</div>`;
-      el.append(loading);
+      el.append(new Loading().render());
     } else {
+      el.append(new FoundedText(this.state).render());
       cart.classList.add("cart__items");
       this.state.films.forEach((film) => {
         cart.append(new CartItem(this.appState, film).render());

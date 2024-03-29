@@ -4,7 +4,7 @@ export class AbstractView {
   }
 
   setTitle(title) {
-    document.setTitle(title);
+    document.title = title;
   }
   destroy() {
     return null;

@@ -4,6 +4,7 @@ import { Header } from "../../components/header/header";
 import { Search } from "../../components/search/search";
 import { ENV } from "../../../env";
 import { Cart } from "../../components/cart/cart";
+import { save } from "../../common/localstorage";
 
 export class MainView extends AbstractView {
   state = {
@@ -18,10 +19,12 @@ export class MainView extends AbstractView {
     this.appState = appState;
     this.appState = onChange(this.appState, this.appStateHook.bind(this));
     this.state = onChange(this.state, this.stateHook.bind(this));
+    this.setTitle("Film library");
   }
 
   appStateHook(path) {
     if (path == "favorites") {
+      save(this.appState.favorites);
       this.render();
     }
   }
@@ -62,5 +65,10 @@ export class MainView extends AbstractView {
     main.append(new Cart(this.appState, this.state).render());
     main.prepend(new Header(this.appState).render());
     this.app.append(main);
+  }
+
+  destroy() {
+    onChange.unsubscribe(this.appState);
+    onChange.unsubscribe(this.state);
   }
 }

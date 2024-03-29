@@ -11,72 +11,9 @@
     />
     <link rel="stylesheet" href="static/global.css" />
     <link rel="stylesheet" href="dist/bundle.css" />
-    <script type="module" src="./dist/app.js"></script>
-    <title>Film library</title>
+    <script src="./dist/app.js" type="module"></script>
   </head>
   <body>
-    <div id="root">
-      <header class="header">
-        <div class="header__logo">
-          <img src="./static/logo.png" alt="logo-img" />
-        </div>
-        <div class="header__info">
-          <a href="#" class="header__search">
-            <img src="./static/search.svg" alt="search-img" />
-            Film search</a
-          >
-          <a href="#favorites" class="header__favorites">
-            <img src="./static/favorites.svg" alt="favorites-img" />
-            Favorites
-            <div class="header__favorites-count">0</div>
-          </a>
-        </div>
-      </header>
-      <div class="search">
-        <div class="search__wrapper">
-          <img
-            class="search__icon"
-            src="./static/search-input.svg"
-            alt="search-input-img"
-          />
-          <input
-            type="text"
-            class="search__input"
-            placeholder="Find your films"
-          />
-        </div>
-        <button class="search__btn">
-          <img src="./static/search-white.svg" alt="search-input-img" />
-        </button>
-      </div>
-      <div>
-        <div class="text">Founded Films - 0</div>
-        <div class="card__items">
-          <div class="card">
-            <div class="card__img">
-              <img
-                src="https://kinopoiskapiunofficial.tech/images/posters/kp_small/689.jpg"
-                alt="film-image"
-              />
-            </div>
-            <div class="card__wrapper">
-              <div class="card__info">
-                <div class="card__genres">1, 2, 3</div>
-                <div class="card__name-en">aboba</div>
-                <div class="card__name-ru">абоба</div>
-                <div class="card__age">2001</div>
-                <div class="card__score">8.2</div>
-                <div class="card__length">02:33</div>
-              </div>
-              <div class="card__footer">
-                <button class="card__button">
-                  <img src="./static/favorites-white.svg" alt="favorites-img" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div id="root"></div>
   </body>
 </html>
