@@ -12,7 +12,7 @@ class App {
   ];
 
   constructor() {
-    addEventListener("hashchange", this.route().bind(this));
+    window.addEventListener("hashchange", this.route.bind(this));
     this.route();
   }
 
@@ -20,10 +20,10 @@ class App {
     if (this.currentView) {
       this.currentView.destroy();
     }
-    const route = this.routes.find((r) => {
+    const view = this.routes.find((r) => {
       return r.path == location.hash;
-    });
-    this.currentView = new route.view(this.state);
+    }).view;
+    this.currentView = new view(this.state);
     this.currentView.render();
   }
 }

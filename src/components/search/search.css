@@ -1,0 +1,36 @@
+.search {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.search__wrapper {
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.search__icon {
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+
+.search__input {
+  border: none;
+  border-radius: 10px;
+  background-color: #dedede;
+  flex: 1;
+  padding: 15px 20px 15px 40px;
+}
+
+.search__btn {
+  background: var(--black);
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  cursor: pointer;
+}
