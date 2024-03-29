@@ -7,7 +7,6 @@ export class Search {
 
   changeInput() {
     this.state.q = this.input.value;
-    console.log(this.state.q);
   }
 
   render() {

@@ -1,0 +1,18 @@
+.text {
+  margin: 20px 0px;
+}
+
+.cart__items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.loading {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #585757;
+}

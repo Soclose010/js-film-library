@@ -3,12 +3,14 @@ import { AbstractView } from "../../common/view";
 import { Header } from "../../components/header/header";
 import { Search } from "../../components/search/search";
 import { ENV } from "../../../env";
+import { Cart } from "../../components/cart/cart";
 
 export class MainView extends AbstractView {
   state = {
     films: [],
     loading: false,
     q: undefined,
+    searchFilmsCountResult: 0,
   };
 
   constructor(appState) {
@@ -26,10 +28,12 @@ export class MainView extends AbstractView {
 
   async stateHook(path) {
     if (path == "q") {
-      this.loading = true;
+      this.state.loading = true;
       const data = await this.loadFilms();
-      this.loading = false;
-      this.films = data.films;
+      this.state.loading = false;
+      this.state.films = data.films;
+      this.state.searchFilmsCountResult = data.searchFilmsCountResult;
+      this.render();
     }
 
     if (path == "loading") {
@@ -55,6 +59,7 @@ export class MainView extends AbstractView {
     const main = document.createElement("div");
     this.app.innerHTML = "";
     main.append(new Search(this.state).render());
+    main.append(new Cart(this.appState, this.state).render());
     main.prepend(new Header(this.appState).render());
     this.app.append(main);
   }

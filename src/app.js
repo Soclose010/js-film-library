@@ -2,7 +2,7 @@ import { MainView } from "./views/main/main";
 
 class App {
   state = {
-    favotites: [],
+    favorites: [],
   };
   routes = [
     {

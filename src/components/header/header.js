@@ -19,7 +19,7 @@ export class Header {
           <a href="#favorites" class="header__favorites">
             <img src="./static/favorites.svg" alt="favorites-img" />
             Favorites
-            <div class="header__favorites-count">${this.appState.favotites.length}</div>
+            <div class="header__favorites-count">${this.appState.favorites.length}</div>
           </a>
         </div>`;
     return el;
