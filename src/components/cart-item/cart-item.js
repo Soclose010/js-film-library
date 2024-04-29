@@ -25,19 +25,19 @@ export class CartItem {
                 <div class="cart__genres">${nn(
                   this.film.genres.map((genre) => genre.genre).join(", ")
                 )}</div>
-                <div class="cart__name-en"><span class="features">Name EN: </span>${nn(
+                <div class="cart__name-en"><span class="movie-info">Name EN: </span>${nn(
                   this.film.nameEn
                 )}</div>
-                <div class="cart__name-ru"><span class="features">Name RU: </span>${nn(
+                <div class="cart__name-ru"><span class="movie-info">Name RU: </span>${nn(
                   this.film.nameRu
                 )}</div>
-                <div class="cart__age"><span class="features">Age: </span>${nn(
+                <div class="cart__age"><span class="movie-info">Age: </span>${nn(
                   this.film.year
                 )}</div>
-                <div class="cart__score"><span class="features">Score: </span>${nn(
+                <div class="cart__score"><span class="movie-info">Score: </span>${nn(
                   this.film.rating
                 )}</div>
-                <div class="cart__length"><span class="features">Length: </span>${nn(
+                <div class="cart__length"><span class="movie-info">Length: </span>${nn(
                   this.film.filmLength
                 )}</div>
               </div>

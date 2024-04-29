@@ -22,19 +22,19 @@ export class FavoriteItem {
                 <div class="cart__genres">${nn(
                   [...this.film.genre].join(", ")
                 )}</div>
-                <div class="cart__name-en"><span class="features">Name EN: </span>${nn(
+                <div class="cart__name-en"><span class="movie-info">Name EN: </span>${nn(
                   this.film.title_en
                 )}</div>
-                <div class="cart__name-ru"><span class="features">Name RU: </span>${nn(
+                <div class="cart__name-ru"><span class="movie-info">Name RU: </span>${nn(
                   this.film.title_ru
                 )}</div>
-                <div class="cart__age"><span class="features">Age: </span>${nn(
+                <div class="cart__age"><span class="movie-info">Age: </span>${nn(
                   this.film.year
                 )}</div>
-                <div class="cart__score"><span class="features">Score: </span>${nn(
+                <div class="cart__score"><span class="movie-info">Score: </span>${nn(
                   this.film.rating.kinopoisk.value
                 )}</div>
-                <div class="cart__length"><span class="features">Length: </span>${nn(
+                <div class="cart__length"><span class="movie-info">Length: </span>${nn(
                   this.film.duration
                 )}</div>
               </div>
