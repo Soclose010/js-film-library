@@ -8,9 +8,9 @@ export class Header {
   render() {
     const el = document.createElement("header");
     el.classList.add("header");
-    el.innerHTML = `<div class="header__logo">
+    el.innerHTML = `<a href="/"><div class="header__logo">
           <img src="./static/logo.png" alt="logo-img" />
-        </div>
+        </div></a>
         <div class="header__info">
           <a href="#" class="header__search">
             <img src="./static/search.svg" alt="search-img" />

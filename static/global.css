@@ -16,3 +16,12 @@ body {
   line-height: 20px;
   color: var(--black);
 }
+
+.features {
+  font-style: italic;
+  color: #b5b1b1;
+}
+
+.filmLink {
+  text-decoration: none;
+}
