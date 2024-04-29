@@ -17,11 +17,15 @@ body {
   color: var(--black);
 }
 
-.features {
+.movie-info {
   font-style: italic;
   color: #b5b1b1;
 }
 
 .filmLink {
   text-decoration: none;
+}
+
+a {
+  color: var(--black);
 }
