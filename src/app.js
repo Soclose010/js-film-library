@@ -1,5 +1,6 @@
 import { load } from "./common/localstorage";
 import { FavoritesView } from "./views/favorites/favorites";
+import { Film } from "./views/film/film";
 import { MainView } from "./views/main/main";
 
 class App {
@@ -14,6 +15,10 @@ class App {
     {
       path: "#favorites",
       view: FavoritesView,
+    },
+    {
+      path: "#film",
+      view: Film,
     },
   ];
 
