@@ -1,5 +1,5 @@
 export const ENV = {
-  API_KEY_KP_UNOFF: "1",
-  API_KEY_KP_APIGET: "2",
-  LOCALSTORAGE_KEY: "3",
+  API_KEY_KP_UNOFF: "",
+  API_KEY_KP_APIGET: "",
+  LOCALSTORAGE_KEY: "FILM_LIB",
 };
